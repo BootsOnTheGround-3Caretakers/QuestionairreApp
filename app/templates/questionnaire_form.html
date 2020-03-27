@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <h1>Questionairre</h1>
+    <form action="" method="post" novalidate>
+    <div class="form-group">        
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32) }}
+        </p>
+        <p>
+        {{ form.need_help() }} 
+        {{ form.need_help.label }}
+        {{ form.need_help_description.label }}<br>
+        {{ form.need_help_description(size=32) }}        
+        </p>
+
+        <p>
+        {{ form.provide_help() }} 
+        {{ form.provide_help.label }}
+        {{ form.provide_help_description.label }}<br>
+        {{ form.provide_help_description(size=32) }}        
+        </p>
+         <p>
+        {{ form.provide_help_description.label }}<br>
+        {{ form.provide_help_description(size=32) }}        
+        </p>
+
+        <p>{{ form.submit() }}</p>
+    </div>
+    </form>
+  
+{% endblock %}
